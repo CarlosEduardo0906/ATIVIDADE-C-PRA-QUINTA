@@ -1,0 +1,90 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <locale.h>
+int i, num, resultado;
+int num;
+int a, b, c;
+int main()
+{
+    setlocale (LC_ALL, "");
+    char nome[50];
+    
+    char login[15] = "Jonathas";
+    char login1[15]; 
+    char senha[100] = "Jonathas1";
+    char senha1[15]; 
+    
+    printf("LOGIN: ");
+    scanf("%s",login1); 
+    printf("SENHA: ");
+    scanf("%s", senha1);
+    
+    if (strcmp(login, login1) == 0) 
+    {
+    	printf("\nBem vindo Jonathan!\n\n");
+    }
+    else
+    {
+    	printf("Login Inválido\n");
+    }
+    
+    {
+    printf("MENU: \n \n");
+    
+    printf("1.A Soma de dois números \n\n");
+    
+    printf("2.Verifique se um número é primo \n\n");
+    
+    printf("3.Série de numero ímpares \n\n");
+    
+    printf("Escolha uma opção:\n");
+    scanf("%d", &num);
+    }
+    switch(num)
+    {
+        case 1:
+        printf("Verificar uma soma \n");
+            printf("a: ");
+        scanf("%d", &a);
+        printf("b: ");
+        scanf("%d", &b);
+        c = a + b;
+        printf("a + b = %d\n", c);
+    
+        break;
+
+    
+ 
+        
+    
+    case 2:
+        printf("Verifique se um número é primo \n");
+        for (i = 2; i <= num / 2; i++) {
+    if (num % i == 0) {
+       resultado++;
+       break;
+    }
+ }
+ 
+ if (resultado == 0)
+    printf("%d é um número primo\n", num);
+ else
+    printf("%d não é um número primo\n", num);
+        break;
+       
+    
+    
+    
+       case 3: 
+        printf("Verificar serie de numero impar \n");
+         int x;
+    x=1;
+    while(x<200)
+    {
+    printf("%d \n",x);
+x= x+2;
+}
+    } 
+return 0;
+}
