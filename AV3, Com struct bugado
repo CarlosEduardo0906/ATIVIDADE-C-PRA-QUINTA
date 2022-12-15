@@ -33,7 +33,7 @@ int login()
     
     if (strcmp(login, login1) == 0) 
     {
-    	printf("\nBem vindo Jonathan!\n\n");
+    	printf("\nBem vindo Jonathas!\n\n");
     	
     }
     else
