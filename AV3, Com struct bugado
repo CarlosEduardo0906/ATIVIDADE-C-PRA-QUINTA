@@ -1,0 +1,180 @@
+int num;
+int i, num, resultado;
+int a, b, c;
+int login();
+int menu();
+int main()
+{
+    login();
+    menu();
+    
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <locale.h>
+
+
+int login()
+{
+    setlocale (LC_ALL, "");
+    char nome[50];
+    
+    char login[15] = "Jonathas";
+    char login1[15]; 
+    char senha[100] = "Jonathas1";
+    char senha1[15]; 
+    
+    printf("LOGIN: ");
+    scanf("%s",login1); 
+    printf("SENHA: ");
+    scanf("%s", senha1);
+    
+    if (strcmp(login, login1) == 0) 
+    {
+    	printf("\nBem vindo Jonathan!\n\n");
+    	
+    }
+    else
+    {
+    	printf("Login Inválido\n");
+    	
+    }
+}
+
+    
+    int menu()
+    {
+        int num, num1, num2;
+        int primo, resultado, i;
+        int soma;
+        int n;
+        
+        int x=1;
+        int*ponteiro;
+        ponteiro=&x;
+        
+        
+    
+    
+        
+        typedef struct 
+{
+    int dia, mes, ano;
+} DataNas;
+
+typedef struct
+{
+DataNas dataNas;
+int idade;
+char sexo;
+char nome[100];
+} Pessoa;
+
+void imprimirpessoa (Pessoa p)
+{
+    printf("\tNome:%s", p.nome);
+    printf("tIdade:%d\n", p.idade);
+    printf("tSexo: %c\n", p.sexo);
+    printf("tData de nas.%d/%d/%d\n, p.idadeNas.dia, p.dataNas.mes,p.dataNas.ano");
+}
+
+int main (){
+    Pessoa pessoa;
+    
+    
+    
+    printf(" Digite o seu nome:\n\n");
+    fgets(pessoa.nome,100,stdin);
+    printf("Digite a sua idade:\n\n");
+    scanf("%d", &pessoa.sexo);
+    
+    
+    printf("Digte F ou M para o sexo:\n\n");
+    scanf("%c", &pessoa.sexo);
+   
+    scanf("%c");
+    
+    printf("Digite sua data de nascimento:\n\n");
+    scanf("%d%d%d", &pessoa.dataNas.dia, &pessoa.dataNas.mes,&pessoa.dataNas.ano);
+    
+}
+  
+    
+    
+    printf("MENU: \n \n");
+    
+    printf("1.A Soma de dois números \n\n");
+    
+    printf("2.Verifique se um número é primo \n\n");
+    
+    printf("3.Série de numero ímpares \n\n");
+    
+    printf("4.Execute um ponteiro \n\n");
+    
+    printf("Escolha uma opção:\n");
+    scanf("%d", &num);
+    
+    switch(num)
+    {
+        
+        
+        case 1:
+        printf("Verificar uma soma \n");
+            printf("a: ");
+        scanf("%d", &a);
+        printf("b: ");
+        scanf("%d", &b);
+        c = a + b;
+        printf("a + b = %d\n", c);
+    
+        break;
+
+    
+ 
+        
+    
+    case 2:
+        printf("Verifique se um número é primo, digite um número inteiro \n");
+        scanf ("%d", &num);
+        for (i = 2; i <= num / 2; i++) {
+    if (num % i == 0) {
+       resultado++;
+       break;
+    }
+ }
+ 
+ if (resultado == 0)
+    printf("%d é um número primo\n", num);
+ else
+    printf("%d não é um número primo\n", num);
+        break;
+       
+    
+    
+    
+       case 3: 
+        printf("Verificar serie de numero impar \n");
+        
+         int x;
+    x=1;
+    scanf("%d", &num);
+    while(x<num)
+    {
+    printf("%d \n",x);
+x= x+2;
+}
+      case 4:
+      
+      printf("%d\n", x);
+      printf("%d\n", ponteiro);
+      printf("%d\n", *ponteiro);
+      
+      break;
+      
+      default:
+      printf("Opção errada");
+    } 
+    return 0;
+}
